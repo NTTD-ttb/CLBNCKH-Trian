@@ -1,0 +1,240 @@
+.container img {
+  /* display: block;
+  margin: 0 auto;
+  width: 50%; */
+  display: block;
+  width: 100%;        /* bám theo max-width cha */
+  max-width: 800px;   /* cùng max-width với form */
+  height: auto;       /* giữ tỉ lệ */
+  margin: 20px auto;  /* căn giữa */
+  border-radius: 12px; /* nếu muốn ảnh cũng bo góc giống form */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* bóng nhẹ */
+}
+/* .form-container{
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid black;
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+} */
+/* ------------------------- */
+/* Container tổng */
+/* .form-container {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #fff;
+  width: 50%;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+} */
+.form-container {
+  max-width: 800px;    /* cùng max-width với ảnh */
+  width: 100%;         /* full chiều ngang trong giới hạn */
+  margin: 30px auto;   /* căn giữa */
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+/* Tiêu đề */
+.form-container .title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #8c0000;
+}
+
+/* Nhóm nút hành động */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.btn-upload {
+  background: #000;
+  color: #fff;
+}
+
+.btn-upload:hover {
+  background: #333;
+}
+
+.btn-download {
+  background: #f1f1f1;
+  color: #333;
+}
+
+.btn-download:hover {
+  background: #e0e0e0;
+}
+
+/* Nhóm form input */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #000;
+}
+
+/* Hàng 2 cột */
+.form-group-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group-row .form-group {
+  flex: 1;
+}
+
+/* Gạch ngang */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* ------------------------- */
+.container-d img {
+    /* display: block;
+    margin: 0 auto;
+    width: 50%; */
+    display: block;
+  width: 100%;        /* bám theo max-width cha */
+  max-width: 800px;   /* cùng max-width với form */
+  height: auto;       /* giữ tỉ lệ */
+  margin: 20px auto;  /* căn giữa */
+  border-radius: 12px; /* nếu muốn ảnh cũng bo góc giống form */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* bóng nhẹ */
+}
+.container-d{
+  max-width: 800px;    /* cùng max-width với ảnh */
+  width: 100%;         /* full chiều ngang trong giới hạn */
+  margin: 30px auto;   /* căn giữa */
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.container{
+  max-width: 800px;    /* cùng max-width với ảnh */
+  width: 100%;         /* full chiều ngang trong giới hạn */
+  margin: 30px auto;   /* căn giữa */
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.form-group label {
+  font-weight: bold;
+}
+/* bs */
+.preview {
+  position: relative;
+  display: inline-block;
+}
+
+.preview .bg {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Avatar trong khung tròn */
+/* Avatar trong khung tròn */
+.preview .avatar {
+  position: absolute;
+  top: 136px;       /* tọa độ Y khung tròn trên background */
+  left: 59px;      /* tọa độ X khung tròn */
+  width: 212px;     
+  height:212px;    
+  object-fit: cover;        /* auto fit vừa khung */
+  object-position: center;  /* luôn căn giữa */
+  border-radius: 50%;       /* bo tròn */
+}
+
+
+/* Họ tên + chức vụ trong khung chữ nhật cam */
+.preview .info-text {
+  position: absolute;
+  top: 395px;    /* ngay dưới avatar */
+  left: 5px;
+  width: 305px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;   /* chữ trắng để nổi bật trên nền cam */
+  font-size: 18px;
+}
+
+/* Lời tri ân trong khung chữ nhật trắng */
+.preview .msg-text {
+  position: absolute;
+  top: 210px;
+  left: 347px;
+  width: 425px;
+  height: 380px;
+  text-align: justify;
+  color: #000;
+  font-size: 20px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+/* Khung chứa cropper */
+.cropper-wrapper {
+  display: none;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 500px;   /* ảnh tối đa 500px ngang */
+  max-height: 500px;  /* ảnh tối đa 500px dọc */
+  overflow: hidden;   /* ẩn phần thừa nếu ảnh vượt khung */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+  padding: 10px;
+}
+
+/* Ảnh để crop */
+.cropper-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+

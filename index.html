@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLB Nghiên cứu khoa học - Tri ân Ngày Nhà giáo Việt Nam</title>
+  <link rel="icon" type="image/png" href="logoclb.png">
+  <link rel="stylesheet" href="style.css">
+  <link  href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</head>
+<body>
+    <!-- ảnh trên cùng -->
+    <div class="container">
+      <img src="anhnen.png" alt="Ảnh">
+    </div>
+
+<!--chỗ form điền vô nè  -->
+  <div class="form-container">
+    <div class="title">
+      <p>CLB Nghiên cứu khoa học - Gửi lời tri ân Kỷ niệm 73 năm Ngày Nhà giáo Việt Nam</p>
+    </div>
+
+    <div class="form-actions">
+      <label for="upload" class="btn btn-upload">📤 Chọn ảnh</label>
+      <input type="file" id="upload" accept="image/*" onchange="previewImage(event)" hidden>
+      <!-- khung cropper khi upload ảnh -->
+      <div class="cropper-wrapper" style="display:none;">
+        <img id="cropper-img" src="">
+        <button type="button" onclick="applyCrop()">OK</button>
+      </div>
+<!-- ----- -->
+      <button class="btn btn-download" onclick="downloadImage()">📥 Tải ảnh về</button>
+    </div>
+
+    <hr>
+
+    <div class="form-group-row">
+      <div class="form-group">
+        <label for="name">Họ và tên</label>
+        <input type="text" id="name" placeholder="Nhập tên" oninput="updateInfo()">
+      </div>
+      <div class="form-group">
+        <label for="role">Chức vụ, đơn vị công tác</label>
+        <input type="text" id="role" placeholder="Nhập tên đơn vị" oninput="updateInfo()">
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="form-group">
+      <label for="msg">Thêm lời tri ân</label>
+      <textarea id="msg" placeholder="Nhập nội dung muốn hiển thị..." rows="5" oninput="updateMessage()"></textarea>
+    </div>
+  </div>
+
+<!-- anh hien thi va dien canvas vao -->
+    <!-- <div class="container-d">
+      <img src="Background.png" alt="Ảnh">
+    </div> -->
+    <div class="container-d">
+  <div class="preview">
+    <!-- Ảnh nền -->
+    <img src="Background.png" class="bg">
+
+    <!-- Ảnh người dùng chọn -->
+    <img id="user-img" class="avatar" src="">
+
+    <!-- Khung hiển thị tên + chức vụ -->
+    <div id="text-info" class="info-text"></div>
+
+    <!-- Khung hiển thị lời tri ân -->
+    <div id="text-msg" class="msg-text"></div>
+  </div>
+</div>
+
+ 
+  <!-- JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
